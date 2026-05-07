@@ -87,6 +87,8 @@ const corsOrigins = new Set([
   "http://localhost:5500",
   `http://127.0.0.1:${PORT}`,
   `http://localhost:${PORT}`,
+  "https://68premios.site",
+  "https://www.68premios.site",
 ]);
 
 app.use(cors({
@@ -181,6 +183,19 @@ function clientIp(req) {
   const raw = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim()
     || req.socket?.remoteAddress || req.ip || "0.0.0.0";
   return raw.replace(/^::ffff:/, "");
+}
+
+function publicOrigin(req) {
+  const proto = String(req.headers["x-forwarded-proto"] || req.protocol || "https").split(",")[0].trim();
+  const host = String(req.headers["x-forwarded-host"] || req.headers.host || "").split(",")[0].trim();
+  return host ? `${proto}://${host}` : "";
+}
+
+function brutalCashPostbackUrl(req) {
+  const configured = String(process.env.BRUTALCASH_POSTBACK_URL || "").trim();
+  if (configured && !/SEU-|localhost|127\.0\.0\.1/i.test(configured)) return configured;
+  const origin = publicOrigin(req);
+  return origin ? `${origin}/api/webhook-brutalcash` : undefined;
 }
 
 function phoneForUtmify(digits) {
@@ -558,7 +573,7 @@ app.post("/api/pix/create", async (req, res) => {
       pix: {
         expires_in_days: 1,
       },
-      postback_url: process.env.BRUTALCASH_POSTBACK_URL,
+      postback_url: brutalCashPostbackUrl(req),
       metadata: {
         productTitle: normalizedData.productTitle,
         quantity: normalizedData.quantity,
