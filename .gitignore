@@ -11,3 +11,6 @@ yarn-error.log*
 pnpm-debug.log*
 .env.*
 !.env.example
+data/*.json
+dist/
+build/
