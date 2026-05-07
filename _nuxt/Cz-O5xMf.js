@@ -1,0 +1,1 @@
+import{I as t}from"./DppblwZ_.js";import{R as i}from"./Cp-MRgH5.js";const r=t("minus",!1,function(e){return i("svg",{width:e.size,height:e.size,viewBox:"0 0 48 48",fill:"none"},[i("path",{d:"M10.5 24L38.5 24",stroke:e.colors[0],"stroke-width":e.strokeWidth,"stroke-linecap":e.strokeLinecap,"stroke-linejoin":e.strokeLinejoin},null)])});export{r as M};

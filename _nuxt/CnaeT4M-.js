@@ -1,0 +1,1 @@
+import{a as c}from"./WXGI-XvS.js";function s(){const r=c(),e=r.getInformacoesDaCompra?.comprador?.cpf,o=window.__NUXT__?.config?.app?.baseURL||"/68premio1/",a=new URL("compra",window.location.origin+o);e&&a.searchParams.set("cpf",e),window.location.href=a.pathname+a.search}export{s as a};

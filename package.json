@@ -1,0 +1,15 @@
+{
+  "name": "rifa-jetta-brutalcash-bff",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "axios": "latest",
+    "cors": "latest",
+    "dotenv": "^17.4.2",
+    "express": "latest"
+  }
+}

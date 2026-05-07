@@ -1,0 +1,1 @@
+import{u as a}from"./WXGI-XvS.js";import{e as r}from"./Cp-MRgH5.js";const c="#4D7C0F",n="33";function l(s){const t=a(),o=r(()=>t.getGenerico("cartelaDeCores")?.button?.pri??c),e=r(()=>o.value+n);return{btnPriColor:o,btnPriColorWithOpacity:e}}export{l as u};

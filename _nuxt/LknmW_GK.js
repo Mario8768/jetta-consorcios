@@ -1,0 +1,1 @@
+import{I as t}from"./DppblwZ_.js";import{R as o}from"./Cp-MRgH5.js";const r=t("plus-cross",!1,function(e){return o("svg",{width:e.size,height:e.size,viewBox:"0 0 48 48",fill:"none"},[o("path",{d:"M30 4H18V18H4V30H18V44H30V30H44V18H30V4Z",fill:e.colors[1],stroke:e.colors[0],"stroke-width":e.strokeWidth,"stroke-linejoin":e.strokeLinejoin},null)])});export{r as P};

@@ -1,0 +1,1 @@
+const p="https://fpp-assets.playservicos.com.br/bpp/play55/black-powered-by.webp",s="https://fpp-assets.playservicos.com.br/bpp/play55/white-powered-by.webp",a="https://fpp-assets.playservicos.com.br/bpp/play55/cash-loader.gif";export{a as C,s as L,p as a};

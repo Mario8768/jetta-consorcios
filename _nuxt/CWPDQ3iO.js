@@ -1,0 +1,1 @@
+import{u as a}from"./jzAxyrDQ.js";import{k as i}from"./WXGI-XvS.js";import"./Cp-MRgH5.js";import"./r9lMvr0O.js";import"./eLmfrEe6.js";const m=async()=>{const{execute:o,data:t,error:e,loading:r}=a("post","/ckat/sessao/logout",{withCredentials:!0},{});await o();const s=i("__Secure-crf-token");return s.value=null,{data:t,error:e,loading:r}};export{m as logout};
