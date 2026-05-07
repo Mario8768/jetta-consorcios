@@ -1,0 +1,1 @@
+import{e as o,M as i}from"./WXGI-XvS.js";const a=()=>{const t=i(),e=navigator.userAgent;t?.context?.isMobile;const s=/mobile|android|iphone|phone/i.test(e)&&!/ipad|tablet/i.test(e);return o("isMobile",()=>s)};export{a as u};
