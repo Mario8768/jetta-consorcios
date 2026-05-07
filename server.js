@@ -91,6 +91,11 @@ const corsOrigins = new Set([
   "https://www.68premios.site",
 ]);
 
+for (const origin of String(process.env.ALLOWED_ORIGINS || "").split(",")) {
+  const normalized = origin.trim().replace(/\/$/, "");
+  if (normalized) corsOrigins.add(normalized);
+}
+
 app.use(cors({
   origin(origin, cb) {
     if (!origin || corsOrigins.has(origin)) return cb(null, true);
